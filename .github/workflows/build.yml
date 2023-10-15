@@ -112,6 +112,7 @@ jobs:
             -DPAHO_BUILD_STATIC=ON ^
             -DPAHO_USE_SELECT=ON ^
             -DPAHO_HIGH_PERFORMANCE=ON ^
+            -DPAHO_ENABLE_TESTING=OFF ^
             -DCMAKE_INSTALL_PREFIX="cmake-build/${{ env.cmakeInstallationPath }}" -B./cmake-build &&^
             cd cmake-build && ( cmake --build . --config Release && cmake --install .  || type .\CMakeFiles\CMakeError.log )  
  
